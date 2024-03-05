@@ -1,3 +1,29 @@
 body {
   background-color: rgb(246, 241, 227);
 }
+
+.navbar {
+  overflow: hidden;
+  background-color: rgb(88, 145, 151);
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: rgb(204, 162, 81);
+  color: black;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
