@@ -22,8 +22,24 @@ body {
 }
 
 img {
-  display: block;
+  display: flex;
+  justify-content: flex-start;
   margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+  margin-right: 0;
+  width: 40%;
+}
+
+.footer {
+  background-color: rgb(115, 81, 74);
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+}
+
+.contact_us {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row-reverse;
+  margin-top: 0;
 }
