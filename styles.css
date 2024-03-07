@@ -1,5 +1,6 @@
 body {
   background-color: rgb(246, 241, 227);
+  font-family: "poppins", "playfair", sans-serif, serif;
 }
 
 .navbar {
@@ -53,7 +54,7 @@ html {
 .hero-image {
   /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    image("./assets/images/chicken_salat.png");
+    url(assets/images/chicken_salat.png);
 
   /* Set a specific height */
   height: 50%;
@@ -73,4 +74,17 @@ html {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+}
+
+.button {
+  background-color: rgb(88, 145, 151);
+  color: white;
+  text-decoration: none;
+  padding: 0.3rem;
+  border-radius: 20%;
+}
+
+.button:hover {
+  background-color: rgb(204, 162, 81);
+  color: black;
 }
