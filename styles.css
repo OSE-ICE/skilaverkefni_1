@@ -3,6 +3,12 @@ body {
   font-family: "poppins", "playfair", sans-serif, serif;
 }
 
+@media only screen and (min-width: 768px) {
+}
+
+@media only screen and (min-width: 1024px) {
+}
+
 .navbar {
   overflow: hidden;
   background-color: rgb(88, 145, 151);
@@ -27,7 +33,7 @@ img {
   justify-content: flex-start;
   margin-left: auto;
   margin-right: 0;
-  width: 40%;
+  width: 30%;
 }
 
 .footer {
@@ -39,7 +45,15 @@ img {
 
 .contact_us {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-direction: row-reverse;
+  margin-top: 0;
+}
+
+.about_us {
+  display: flex;
+  justify-content: space-around;
   align-items: flex-start;
   flex-direction: row-reverse;
   margin-top: 0;
@@ -87,4 +101,36 @@ html {
 .button:hover {
   background-color: rgb(204, 162, 81);
   color: black;
+}
+
+.menu-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1rem;
+}
+
+.menu-item {
+  margin: 1rem;
+  text-align: center;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+  border-radius: 15px;
+}
+
+.menu-item img {
+  display: block;
+  margin: auto;
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .menu-container {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: minmax(200px, auto);
+    grid-auto-flow: row dense;
+    grid-template-rows: repeat(2, 1fr);
+  }
 }
