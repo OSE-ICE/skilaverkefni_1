@@ -1,36 +1,31 @@
 body {
-  background-color: rgb(246, 241, 227);
   font-family: "poppins", "playfair", sans-serif, serif;
   margin: 0;
   padding: 0;
 }
 
 h1 {
-  padding-top: 2rem;
-  padding-left: 1rem;
+  padding-left: 1.5rem;
 }
 
 h2 {
-  padding-top: 2rem;
-  padding-left: 1rem;
+  padding-left: 1.5rem;
+  display: flex;
+  margin-block-end: 0;
+  margin-block-start: 0;
 }
 
 h3 {
   font-weight: 400;
   font-size: 1rem;
 }
-
-@media only screen and (min-width: 768px) {
-}
-
-@media only screen and (min-width: 1024px) {
+p {
+  margin: 0;
 }
 
 .navbar {
-  position: fixed;
+  overflow: auto;
   top: 0;
-  width: 100%;
-  z-index: 1000; /* Ensure the navbar stays on top of other elements */
   background-color: rgb(88, 145, 151);
 }
 
@@ -61,7 +56,7 @@ img {
   color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
-  width: 100%;
+  bottom: 0;
 }
 
 .contact_us {
@@ -70,6 +65,11 @@ img {
   align-items: flex-start;
   flex-direction: row-reverse;
   margin-top: 0;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 15px;
 }
 
 .about_us {
@@ -88,6 +88,8 @@ img {
 body,
 html {
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 /* The hero image */
@@ -128,35 +130,49 @@ html {
   background-color: rgb(204, 162, 81);
   color: black;
 }
+.submit {
+  background-color: rgb(88, 145, 151);
+  color: white;
+  text-decoration: none;
+  padding: 0.3rem;
+}
+
+.submit:hover {
+  background-color: rgb(204, 162, 81);
+  color: black;
+}
 
 .menu-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .menu-item {
+  flex: 1 1 100%; /* By default, menu items take 100% of the width (1 column) */
+  background-color: rgb(246, 241, 227);
+  display: flex;
   margin: 1rem;
-  text-align: center;
-  border: 1px solid #ccc;
+  text-align: right;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   padding: 1rem;
   border-radius: 15px;
 }
 
 .menu-item img {
-  display: block;
+  display: flex;
   margin: auto;
-  width: 100%;
   max-width: 200px;
   height: auto;
 }
 
-@media (min-width: 768px) {
-  .menu-container {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-auto-rows: minmax(200px, auto);
-    grid-auto-flow: row dense;
-    grid-template-rows: repeat(2, 1fr);
+@media only screen and (min-width: 600px) {
+  .menu-item {
+    flex: 1 1 50%; /* On medium screens, menu items take 50% of the width (2 columns) */
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .menu-item {
+    flex: 1 1 33.33%; /* On large screens, menu items take 33.33% of the width (3 columns) */
   }
 }
