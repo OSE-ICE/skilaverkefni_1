@@ -6,6 +6,8 @@ body {
 
 h1 {
   padding-left: 1.5rem;
+  margin-block-start: 0.3rem;
+  margin-block-end: 0;
 }
 
 h2 {
@@ -16,17 +18,25 @@ h2 {
 }
 
 h3 {
-  font-weight: 400;
+  font-weight: 700;
   font-size: 1rem;
+  margin: 0;
 }
 p {
   margin: 0;
 }
 
+.menu-root {
+  padding-top: calc(1.1rem + 38px);
+}
+
 .navbar {
+  position: fixed;
+  width: 100%;
   overflow: auto;
   top: 0;
   background-color: rgb(88, 145, 151);
+  z-index: 1;
 }
 
 .navbar a {
@@ -36,6 +46,7 @@ p {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  font-size: 1.1rem;
 }
 
 .navbar a:hover {
@@ -49,6 +60,7 @@ img {
   margin-left: auto;
   margin-right: 0;
   width: 30%;
+  padding-right: 1rem;
 }
 
 .footer {
@@ -59,30 +71,31 @@ img {
   bottom: 0;
 }
 
-.contact_us {
+.contact-us {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
   flex-direction: row-reverse;
-  margin-top: 0;
   border: 1px solid #ccc;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   padding: 1rem;
-  margin: 1rem;
+  margin: 0.5rem 1rem 1rem 1rem;
   border-radius: 15px;
 }
 
-.about_us {
-  display: flex;
+.about-us {
   justify-content: space-around;
   align-items: flex-start;
   flex-direction: row-reverse;
-  margin-top: 0;
   border: 1px solid #ccc;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   padding: 1rem;
-  margin: 1rem;
+  margin: 0.5rem 1rem 0rem 1rem;
   border-radius: 15px;
+}
+
+.img-about {
+  margin: 0 auto;
 }
 
 body,
@@ -123,13 +136,35 @@ html {
   color: white;
   text-decoration: none;
   padding: 0.3rem;
-  border-radius: 20%;
+  border-radius: 8px;
+  align-self: flex-end;
+}
+
+.menu-text {
+  margin-bottom: 0.5rem;
+}
+
+.menu-prize {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.prize {
+  background-color: rgb(88, 145, 151);
+  color: white;
+  text-decoration: none;
+  padding: 0.3rem;
+  border-radius: 8px;
+  align-self: flex-end;
+  padding: 5px;
 }
 
 .button:hover {
   background-color: rgb(204, 162, 81);
   color: black;
 }
+
 .submit {
   background-color: rgb(88, 145, 151);
   color: white;
@@ -156,6 +191,7 @@ html {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   padding: 1rem;
   border-radius: 15px;
+  max-width: 400px;
 }
 
 .menu-item img {
@@ -168,6 +204,13 @@ html {
 @media only screen and (min-width: 600px) {
   .menu-item {
     flex: 1 1 50%; /* On medium screens, menu items take 50% of the width (2 columns) */
+  }
+  .about-us {
+    display: flex;
+  }
+
+  .img-about {
+    margin: 0;
   }
 }
 
